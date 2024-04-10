@@ -1,21 +1,18 @@
 #include <stdio.h> //standard input/output
 //#include <conio.h> //console input/output
 #include<string.h>
-void main()
-{
+void main(){
     int choice, operators, fabonacci, loop;
     printf("Press 1: Opertors \nPress 2: Loop Control Structure \nPress 3: Fabonacci Number \nPress 4: Factorial \nPress 5: Even-Odd Number \n");
     printf("\nPress Choice Your Number: ");
     scanf("%d", &choice);
-    switch (choice)
-    {
+    switch (choice){
     case 1:
         //clrscr();
         printf("Press 1: Assignment Operator \nPress 2: Logical Operator \nPress 3: Relational Operator \nPress 4: Bitwise Operator \nPress 5: Arithmetic Operator \nPress 6: Increament/Decreament Operator \n");
         printf("\nPress Choose Your Number: ");
         scanf("%d",&operators);
-        switch (operators)
-        {
+        switch (operators){
         case 1:
             AssignmentOperator();
             break;
@@ -40,8 +37,7 @@ void main()
         printf("Press 1: IterationNestedForLoop");
         printf("\nPress Choose Your Number");
         scanf("%d",&loop);
-        switch(loop)
-        {
+        switch(loop){
             case 1:
                 IterationNestedForLoop();
                 break;
@@ -54,8 +50,7 @@ void main()
         printf("Press 1: fibonacciWithoutRecursion \nPress 2: fibonacciWithRecursion");
         printf("\nPress Choice Your Number: ");
         scanf("%d",&fabonacci);
-        switch(fabonacci)
-        {
+        switch(fabonacci){
             case 1:
                 fibonacciWithoutRecursion();
                 break;
@@ -73,9 +68,7 @@ void main()
     }
     // getch(); // getch() Pre-defined function
 }
-
-int AssignmentOperator()
-{
+int AssignmentOperator(){
     // Symbols = += -= *= /= %=
     int x; // Declaration
     x = 5; // Assignment
@@ -90,6 +83,7 @@ int AssignmentOperator()
     printf("The value of x is: %d\n", x);
     x %= 5; // Equivalent to x = x % 5; (Modulus assignment)
     printf("The value of x is: %d\n", x);
+    return 0;
 }
 int LogicalOperator(){ // need modification
     // Symbols && || !  // Logical AND (&&) example
@@ -123,9 +117,9 @@ int LogicalOperator(){ // need modification
     {
         printf("It's rainy today.\n");
     }
+    return 0;
 }
-int RelationalOperator()
-{
+int RelationalOperator(){
     // Symbols == != < > <= >=
     int a, b;
     // Relational operators in if statements
@@ -155,9 +149,9 @@ int RelationalOperator()
     {
         printf("%d is less than or equal to %d\n", a, b);
     }
+    return 0;
 }
-int BitwiseOperator()
-{
+int BitwiseOperator(){
     // symbols => & | >> << ~ ^
     int num1, num2;
     printf("Enter first number: ");
@@ -170,9 +164,9 @@ int BitwiseOperator()
     printf("\nBitwise Left Shift %d", num1 << num2);
     printf("\nBitwise XOR %d", num1 ^ num2);
     printf("\nBitwise NOT %d", ~num1);
+    return 0;
 }
-int ArithmeticOperator()
-{
+int ArithmeticOperator(){
     int num1, num2, sum, sub, mul, div, mod;
     printf("Enter first number: ");
     scanf("%d", &num1);
@@ -188,19 +182,19 @@ int ArithmeticOperator()
     printf("\nValue Divide is: %d", div);
     mod = num1 % num2;
     printf("\nValue Modulus is: %d", mod);
+    return 0;
 }
-int Prefix_PostfixNumber()
-{
-    // Symbols ++ --
+int Prefix_PostfixNumber(){
+    // Symbols ++(increament), --(decreament)
     int a;
-    printf("\n%d", a);
-    printf("\n%d", ++a);
-    printf("\n%d", --a);
-    printf("\n%d", a++);
-    printf("\n%d", a--);
+    printf("\n%d", a); //simple operator
+    printf("\n%d", ++a); // prefix oprator
+    printf("\n%d", --a); // prefix operator
+    printf("\n%d", a++); // postfix operator
+    printf("\n%d", a--); // postfix operator
+    return 0;
 }
-int IterationNestedForLoop()
-{
+int IterationNestedForLoop(){
     int i, j, plus;
     for (i = -1; i > -6; i--)
     {
@@ -214,9 +208,9 @@ int IterationNestedForLoop()
     }
     printf("\nTotal number of loop running%d", plus);
     printf("\nBye!");
+    return 0;
 }
-int IterationForLoop()
-{
+int IterationForLoop(){
     int i, j;
     printf("Enter new number ");
     scanf("%d", &j);
@@ -229,6 +223,7 @@ int IterationForLoop()
         printf("Print Decreament Loop %d\n", i);
     }
     printf("Bye!");
+    return 0;
 }
 int fibonacciWithoutRecursion()
 {
@@ -948,4 +943,30 @@ int NumericPattern(){
         printf("\n");
     }
     return 0;
+}
+int Calculator(){
+    char ch;
+    float num1, num2, result = 0;
+    printf("Enter the Operation: ");
+    scanf("%c",&ch);
+    printf("Enter the numbers: ");
+    scanf("%f %f",&num1,&num2);
+    switch (ch){
+    case '+':
+        result = num1 + num2;
+        break;
+    case '-':
+        result = num1 - num2;
+        break;
+    case '*':
+        result = num1 * num2;
+        break;
+    case '/':
+        result = num1 / num2;
+        break;
+    default:
+        printf("Invalid option");
+        break;
+    }
+    printf("%.2f",result);
 }
