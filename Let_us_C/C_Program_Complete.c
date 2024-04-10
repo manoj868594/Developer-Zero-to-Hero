@@ -1,74 +1,9 @@
 #include <stdio.h> //standard input/output
-//#include <conio.h> //console input/output
-#include<string.h>
-void main(){
-    int choice, operators, fabonacci, loop;
-    printf("Press 1: Opertors \nPress 2: Loop Control Structure \nPress 3: Fabonacci Number \nPress 4: Factorial \nPress 5: Even-Odd Number \n");
-    printf("\nPress Choice Your Number: ");
-    scanf("%d", &choice);
-    switch (choice){
-    case 1:
-        //clrscr();
-        printf("Press 1: Assignment Operator \nPress 2: Logical Operator \nPress 3: Relational Operator \nPress 4: Bitwise Operator \nPress 5: Arithmetic Operator \nPress 6: Increament/Decreament Operator \n");
-        printf("\nPress Choose Your Number: ");
-        scanf("%d",&operators);
-        switch (operators){
-        case 1:
-            AssignmentOperator();
-            break;
-        case 2:
-            LogicalOperator();
-            break;
-        case 3:
-            RelationalOperator();
-            break;
-        case 4:
-            BitwiseOperator();
-            break;
-        case 5:
-            ArithmeticOperator();
-            break;
-        case 6:
-            Prefix_PostfixNumber();
-            break;
-        }
-        break;
-    case 2:
-        printf("Press 1: IterationNestedForLoop");
-        printf("\nPress Choose Your Number");
-        scanf("%d",&loop);
-        switch(loop){
-            case 1:
-                IterationNestedForLoop();
-                break;
-            case 2:
-                IterationForLoop();
-                break;
-        }
-        break;
-    case 3:
-        printf("Press 1: fibonacciWithoutRecursion \nPress 2: fibonacciWithRecursion");
-        printf("\nPress Choice Your Number: ");
-        scanf("%d",&fabonacci);
-        switch(fabonacci){
-            case 1:
-                fibonacciWithoutRecursion();
-                break;
-            case 2:
-                fibonacciWithRecursion();
-                break;
-        }
-        break;
-    case 4:
-        factorial();
-        break;
-    case 5:
-        EvenOdd();
-        break;
-    }
-    // getch(); // getch() Pre-defined function
-}
-int AssignmentOperator(){
+// #include <conio.h> //console input/output
+#include <string.h>
+
+int AssignmentOperator()
+{
     // Symbols = += -= *= /= %=
     int x; // Declaration
     x = 5; // Assignment
@@ -83,9 +18,9 @@ int AssignmentOperator(){
     printf("The value of x is: %d\n", x);
     x %= 5; // Equivalent to x = x % 5; (Modulus assignment)
     printf("The value of x is: %d\n", x);
-    return 0;
 }
-int LogicalOperator(){ // need modification
+int LogicalOperator()
+{ // need modification
     // Symbols && || !  // Logical AND (&&) example
     int num1 = 5, num2 = 8, age;
     printf("Enter Your Age: ");
@@ -117,9 +52,9 @@ int LogicalOperator(){ // need modification
     {
         printf("It's rainy today.\n");
     }
-    return 0;
 }
-int RelationalOperator(){
+int RelationalOperator()
+{
     // Symbols == != < > <= >=
     int a, b;
     // Relational operators in if statements
@@ -149,9 +84,9 @@ int RelationalOperator(){
     {
         printf("%d is less than or equal to %d\n", a, b);
     }
-    return 0;
 }
-int BitwiseOperator(){
+int BitwiseOperator()
+{
     // symbols => & | >> << ~ ^
     int num1, num2;
     printf("Enter first number: ");
@@ -164,9 +99,9 @@ int BitwiseOperator(){
     printf("\nBitwise Left Shift %d", num1 << num2);
     printf("\nBitwise XOR %d", num1 ^ num2);
     printf("\nBitwise NOT %d", ~num1);
-    return 0;
 }
-int ArithmeticOperator(){
+int ArithmeticOperator()
+{
     int num1, num2, sum, sub, mul, div, mod;
     printf("Enter first number: ");
     scanf("%d", &num1);
@@ -182,19 +117,19 @@ int ArithmeticOperator(){
     printf("\nValue Divide is: %d", div);
     mod = num1 % num2;
     printf("\nValue Modulus is: %d", mod);
-    return 0;
 }
-int Prefix_PostfixNumber(){
-    // Symbols ++(increament), --(decreament)
+int Prefix_PostfixNumber()
+{
+    // Symbols ++ --
     int a;
-    printf("\n%d", a); //simple operator
-    printf("\n%d", ++a); // prefix oprator
-    printf("\n%d", --a); // prefix operator
-    printf("\n%d", a++); // postfix operator
-    printf("\n%d", a--); // postfix operator
-    return 0;
+    printf("\n%d", a);
+    printf("\n%d", ++a);
+    printf("\n%d", --a);
+    printf("\n%d", a++);
+    printf("\n%d", a--);
 }
-int IterationNestedForLoop(){
+int IterationNestedForLoop()
+{
     int i, j, plus;
     for (i = -1; i > -6; i--)
     {
@@ -208,9 +143,9 @@ int IterationNestedForLoop(){
     }
     printf("\nTotal number of loop running%d", plus);
     printf("\nBye!");
-    return 0;
 }
-int IterationForLoop(){
+int IterationForLoop()
+{
     int i, j;
     printf("Enter new number ");
     scanf("%d", &j);
@@ -223,7 +158,6 @@ int IterationForLoop(){
         printf("Print Decreament Loop %d\n", i);
     }
     printf("Bye!");
-    return 0;
 }
 int fibonacciWithoutRecursion()
 {
@@ -305,8 +239,7 @@ int DoWhileLoop()
     {
         printf("%d ", a);
         a++;
-    }
-    while (a < 5);
+    } while (a < 5);
     printf("\n");
     a = 0; // Reset count for the next example
     printf("Using 0-5 number print in while loop:\n");
@@ -320,7 +253,8 @@ int DoWhileLoop()
 int ArmStrongIfElse()
 {
     int a, b, c, x, y, d;
-    printf("Armstrong Number is: 407, 153, 370, 371 \n");
+    printf("An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits in the number.\n");
+    printf("Example:- Armstrong Number is: 407, 153, 370, 371 \n");
     printf("Enter number: ");
     scanf("%d", &x);
     a = x % 10;
@@ -340,7 +274,7 @@ int ArmStrongIfElse()
 int AmrStrongForLoop()
 {
     int x, y, t, s = 0, a, i;
-    printf("Armstrong Number is: 407, 153, 370, 371 \n");
+    printf("An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits in the number.\n");
     printf("Enter a range number: ");
     scanf("%d", &i);
     for (x = 1; x <= i; x++)
@@ -355,7 +289,7 @@ int AmrStrongForLoop()
         }
         if (x == s)
         {
-            printf("It is Armstrong: %d\n", s);
+            printf("%d is Armstrong: %d\n", x, s);
         }
     }
 }
@@ -398,7 +332,7 @@ int MarksNumberArrays() // need improvement
     printf("Total Marks is %f\n", s);
     per = (s / 500) * 100;
     if (per <= 100 && per > 80 && a[0] > 33 && a[1] > 33 && a[2] > 33 && a[3] > 33 && a[4] > 33 && a[0] <= 100 &&
-            a[1] <= 100 && a[2] <= 100 && a[3] <= 100 && a[4] <= 100)
+        a[1] <= 100 && a[2] <= 100 && a[3] <= 100 && a[4] <= 100)
     {
         printf("Congratulations Distinct ");
         printf("%f\n", per);
@@ -480,14 +414,15 @@ int TableNumberRange()
 int FirstNumberTable()
 {
     int i, n;
-    int j[10]; // Array
+    int j; // Array
     printf("Enter A Number: ");
     scanf("%d", &n);
     for (i = 1; i <= 10; i++)
     {
-        j[i] = n * i;
-        printf("%d*%i %d \n", n, i, j[i]);
+        j = n * i;
+        printf("%d*%i %d \n", n, i, j);
     }
+    return 0;
 }
 int ASCII_Value()
 {
@@ -537,6 +472,7 @@ int if_else()
     {
         printf("Both numbers are equal\n");
     }
+    return 0;
 }
 int LCM_Num()
 {
@@ -564,7 +500,7 @@ int HCF_Num()
         }
     }
 }
-int matrix_sol()
+int SumOfMatrix()
 {
     int row, col, m;
     printf("Enter a row: ");
@@ -594,7 +530,7 @@ int matrix_sol()
     {
         for (j = 0; j < col; j++)
         {
-            c[i][j] = a[i][j] + b[i][j];
+            c[i][j] = a[i][j] + b[i][j]; // here can subtrat, multiply, divide
         }
     }
     printf("Addition 2 matrix is:\n");
@@ -638,8 +574,8 @@ int pointer()
     printf("x: %d\n", x);   // output is given input
     printf("&x: %d\n", &x); // o/p is the address of x
     printf("&y: %d\n", &y); // o/p is the address of y
-    printf("*y: %u\n", *y); // Here %u is unsigned integers
-    printf("*(&y): %u\n", *(&y));
+    printf("*y: %d\n", *y); // Here %u is unsigned integers
+    printf("*(&y): %d\n", *(&y));
     printf("y: %d\n", y); // Pointer to an integer
 
     z = &y;
@@ -661,18 +597,19 @@ int power_num()
 }
 int reverse_num()
 {
-    int a,b,c=0;
+    int a, b, c = 0;
     printf("Enter numbers: ");
-    scanf("%d",&a);
-    while(a!=0)
+    scanf("%d", &a);
+    while (a != 0)
     {
-        b=a%10;
-        c=(c*10)+b;
-        a=a/10;
+        b = a % 10;
+        c = (c * 10) + b;
+        a = a / 10;
     }
-    printf("Reverse Number is: %u\n",c);
+    printf("Reverse Number is: %u\n", c);
 }
-int isPrime(){
+int isPrime()
+{
     int i, j = 2;
     printf("Enter a Number for checking is prime number or not: ");
     scanf("%d", &i);
@@ -695,7 +632,8 @@ int isPrime(){
     }
     return 0;
 }
-int ThreeSwappingVariables(){
+int ThreeSwappingVariables()
+{
     int num1, num2, temp;
     printf("Enter two numbers: ");
     scanf("%d %d", &num1, &num2);
@@ -705,9 +643,11 @@ int ThreeSwappingVariables(){
     printf("After swapping, num1 = %d and num2 = %d\n", num1, num2);
     return 0;
 }
-int Interest5set(){
+int Interest5set()
+{
     float principal, rate, time;
-    for (int i = 1; i <= 5; i++) {
+    for (int i = 1; i <= 5; i++)
+    {
         printf("Enter principal, rate, and time for set %d: ", i);
         scanf("%f %f %f", &principal, &rate, &time);
         float simple_interest = (principal * rate * time) / 100;
@@ -716,242 +656,294 @@ int Interest5set(){
     return 0;
 }
 int TransposeMatrix(){
-	int mat[2][2],trans[2][2],i,j;
-	printf("Enter Matrix Elements: ");
-	for(i=0;i<2;i++){
-		for(j=0;j<2;j++){
-			scanf("%d",&mat[i][j]);
-		}
-	}
-	printf("Matrix Elements:\n");
-	for(i=0;i<2;i++){
-		for(j=0;j<2;j++){
-			printf("%d ",mat[i][j]);
-		}
-		printf("\n");
-	}
-	for(i=0;i<2;i++){
-		for(j=0;j<2;j++){
-			trans[i][j] = mat[j][i];
-		}
-	}
-	printf("Transpose Elements:\n");
-	for(i=0;i<2;i++){
-		for(j=0;j<2;j++){
-			printf("%d ",trans[i][j]);
-		}
-		printf("\n");
-	}
+    int mat[2][2], trans[2][2], i, j;
+    printf("Enter Matrix Elements: ");
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 2; j++)
+        {
+            scanf("%d", &mat[i][j]);
+        }
+    }
+    printf("Matrix Elements:\n");
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 2; j++)
+        {
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 2; j++)
+        {
+            trans[i][j] = mat[j][i];
+        }
+    }
+    printf("Transpose Elements:\n");
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 2; j++)
+        {
+            printf("%d ", trans[i][j]);
+        }
+        printf("\n");
+    }
     return 0;
 }
-int SumOfSeries(){
-    int n, sum = 0;
+int SumOfSeries()
+{
+    int n, sum = 0, sub = 0;
     printf("Enter a number range: ");
-    scanf("%d",&n);
-    for(int i=1;i<=n;i++){
-        if(i%2 != 0){
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
+    {
+        if (i % 2 != 0)
+        {
             sum = sum + i;
-        }else{
-            sum = sum - i;
+        }
+        else
+        {
+            sub = sub - i;
         }
     }
     // 1 - 2 + 3 - 4 + 5 - 6 + 7....n terms
-    printf("The Sum is: %d",sum);
+    printf("The Sum is: %d", sum);
+    printf("\nThe Sub is: %d", sub);
     return 0;
 }
-int ReverseSumNumber(){
-    int num,r=0,sum=0,number;
+int ReverseSumNumber()
+{
+    int num, r = 0, sum = 0, number;
     printf("Enter a Nuumber: ");
-    scanf("%d",&num);
+    scanf("%d", &num);
     number = num;
-    while(num>0){
-        r = r*10;
-        r = r + (num%10);
-        num = num/10;
+    while (num > 0)
+    {
+        r = r * 10;
+        r = r + (num % 10);
+        num = num / 10;
     }
     sum = number + r;
-    printf("Revers Number is: %d",r);
-    printf("\nSum of Original & Reverse Number: %d\n",sum);
+    printf("Revers Number is: %d", r);
+    printf("\nSum of Original & Reverse Number: %d\n", sum);
 }
-char String1(){
+char StringProperty()
+{
     int i;
-    char a[] = {"amit"},e[]= {"Amit"};
-    int x=strcmp(a,e); //check value is equal or not
-    printf("%d ",x); //ascii code A=65, a=97
-    strrev(a); //string reverse
-    strlen(a); //for check string length
-    strcpy(a, "Manoj "); //string copy
-    strcat(a,"Kumar"); //concatination
-    printf("%s",a);
-    getch();
+    char a[20] = {"amit"}, e[20] = {"Amit"};
+    int x = strcmp(a, e); // check value is equal or not
+    printf("%d ", x);     // ascii code A=65, a=97
+    // strrev(a); //string reverse
+    strlen(a);           // for check string length
+    strcpy(a, "Manoj "); // string copy
+    strcat(a, "Kumar");  // concatination
+    printf("%s", a);
+    return 0;
 }
-char string2(){
+char StringForLoop()
+{
     int i;
-    char a[] = {"amit"}, b[] = {'a','m','r','i','t','\0'};
+    char a[] = {"amit"}, b[] = {'a', 'm', 'r', 'i', 't', '\0'};
     char c[7] = {"Ashish"};
     char d[20];
     printf("Enter your name: ");
-    scanf("%s",d);
-    printf("%s %s %s %s ",a,b,c,d);
+    scanf("%s", d);
+    printf("%s %s %s %s ", a, b, c, d);
 
-    for(i=0; d[i]!='\0'; i++); //if don't use strlen(); function
-    printf("Length of %s: %d",d,i);
+    for (i = 0; d[i] != '\0'; i++)
+        ; // if don't use strlen(); function
+    printf("Length of %s: %d", d, i);
 }
-char strcmp_String(){
+char String_strcmp()
+{
     char firstname[40], secname[40];
-	int check;
-	printf("Enter First Name: ");
-	gets(firstname);
-	printf("Enter Second Name: ");
-	gets(secname);
-	check = strcmp(firstname, secname);
-	
-	if(check == 0){
-		printf("Both String are equal");
-	}else if(check < 0){
-		printf("First string is smaller than other");
-	}else{
-		printf("First string is greater.");
-	}
-	return 0;
+    int check;
+    printf("Enter First Name: ");
+    gets(firstname);
+    printf("Enter Second Name: ");
+    gets(secname);
+    check = strcmp(firstname, secname);
+
+    if (check == 0)
+    {
+        printf("Both String are equal");
+    }
+    else if (check < 0)
+    {
+        printf("First string is smaller than other");
+    }
+    else
+    {
+        printf("First string is greater.");
+    }
+    return 0;
 }
-char StringWithoutstrrev(){
-	int l,j,i;
-	char si[30],c;
-	printf("Enter name: ");
-	gets(si);
-	l = strlen(si);
-	/*for(j=0;j<l/2;j++){
-		c = si[j];
-		si[j] = si[l-1-j];
-		si[l-1-j] = c;
-	}*/
-	for(j=0,i=l-1;j<i;j++,i--){
+char StringWithoutstrrev()
+{
+    int l, j, i;
+    char si[30], c;
+    printf("Enter name: ");
+    gets(si);
+    l = strlen(si);
+    /*for(j=0;j<l/2;j++){
+        c = si[j];
+        si[j] = si[l-1-j];
+        si[l-1-j] = c;
+    }*/
+    for (j = 0, i = l - 1; j < i; j++, i--)
+    {
         c = si[j];
         si[j] = si[i];
         si[i] = c;
-	}
-	printf("%s",si);
-	return 0;
+    }
+    printf("%s", si);
+    return 0;
 }
-union stu{
+union stu
+{
     int a;
     char b;
 };
-int Union(){
+int Union()
+{
     union stu e;
     e.a = 65;
-    printf("%c",e.b);
-	return 0;
+    printf("%c", e.b);
+    return 0;
 }
-struct emp{
+struct emp
+{
     int eid;
     char ename[20];
     float esal;
 };
-int Structure(){
+int Structure()
+{
     struct emp e;
     e.eid = 10;
-    strcpy(e.ename,"Harsh");
+    strcpy(e.ename, "Harsh");
     e.esal = 200000.5;
-    printf("Emp ID %d",e.eid);
-    printf("\nEmp name %s",e.ename);
-    printf("\nEmp salary %lf",e.esal);
-	return 0;
+    printf("Emp ID %d", e.eid);
+    printf("\nEmp name %s", e.ename);
+    printf("\nEmp salary %lf", e.esal);
+    return 0;
 }
-int StaticStorageCall(){
-    StaticStorage();
-    StaticStorage();
-    StaticStorage();
-	return 0;
-}
-int StaticStorage(){
+int StaticStorage()
+{
     int a = 1;
     static int b = 1;
-    printf("%d %d",a,b);
+    printf("%d %d", a, b);
     a++;
     b++;
     printf("\n");
 }
-char strupr(char *str) {
-    while (*str) {
+int StaticStorageCall()
+{
+    StaticStorage();
+    StaticStorage();
+    StaticStorage();
+    return 0;
+}
+char strupr(char *str)
+{
+    while (*str)
+    {
         *str = (*str >= 'a' && *str <= 'z') ? *str - 32 : *str;
         str++;
     }
 }
-char strlwr(char *str) {
-    while (*str) {
+char strlwr(char *str)
+{
+    while (*str)
+    {
         *str = (*str >= 'A' && *str <= 'Z') ? *str + 32 : *str;
         str++;
     }
 }
-char StringUpperLowercase() {
+char StringUpperLowercase()
+{
     char name[40];
-	printf("Enter Your Name: ");
-	gets(name);
-	strupr(name);
-	printf("Name in capital is: %s",name);
-	strlwr(name);
-	printf("\nName in lower is: %s",name);
-	return 0;
+    printf("Enter Your Name: ");
+    scanf("%s", name);
+    strupr(name);
+    printf("Name in capital is: %s", name);
+    strlwr(name);
+    printf("\nName in lower is: %s", name);
+    return 0;
 }
-int RegisterStorageClass(){
-    register int i,sum = 0;
-    for(i=0;i<4;i++){
+int RegisterStorageClass()
+{
+    register int i, sum = 0;
+    for (i = 0; i < 4; i++)
+    {
         sum = sum + i;
-        printf("%d ",sum);
+        printf("%d ", sum);
     }
 }
-int AlphabeticTrianglePattern(){
+int AlphabeticTrianglePattern()
+{
     int i, j, k, space, n;
     printf("Enter the number of lines: ");
     scanf("%d", &n);
-    for (i = 1; i <= n; i++) {
+    for (i = 1; i <= n; i++)
+    {
         // Print spaces
-        for (space = 1; space <= n - i; space++) {
+        for (space = 1; space <= n - i; space++)
+        {
             printf(" ");
         }
         // Print left half of the pattern
-        for (j = 1; j <= i; j++) {
+        for (j = 1; j <= i; j++)
+        {
             printf("%c", 'A' + j - 1);
         }
         // Print right half of the pattern
-        for (k = i - 1; k >= 1; k--) {
+        for (k = i - 1; k >= 1; k--)
+        {
             printf("%c", 'A' + k - 1);
         }
         printf("\n");
     }
     return 0;
 }
-int NumericPattern(){
+int NumericPattern()
+{
     int i, j, k, space, n;
     printf("Enter the number of lines: ");
     scanf("%d", &n);
-    for (i = 1; i <= n; i++) {
+    for (i = 1; i <= n; i++)
+    {
         // Print spaces
-        for (space = 1; space <= n - i; space++) {
+        for (space = 1; space <= n - i; space++)
+        {
             printf(" ");
         }
         // Print left half of the pattern
-        for (j = 1; j <= i; j++) {
+        for (j = 1; j <= i; j++)
+        {
             printf("%c", '1' + j - 1);
         }
         // Print right half of the pattern
-        for (k = i - 1; k >= 1; k--) {
+        for (k = i - 1; k >= 1; k--)
+        {
             printf("%c", '1' + k - 1);
         }
         printf("\n");
     }
     return 0;
 }
-int Calculator(){
+int Calculator()
+{
     char ch;
     float num1, num2, result = 0;
     printf("Enter the Operation: ");
-    scanf("%c",&ch);
+    scanf("%c", &ch);
     printf("Enter the numbers: ");
-    scanf("%f %f",&num1,&num2);
-    switch (ch){
+    scanf("%f %f", &num1, &num2);
+    switch (ch)
+    {
     case '+':
         result = num1 + num2;
         break;
@@ -968,5 +960,244 @@ int Calculator(){
         printf("Invalid option");
         break;
     }
-    printf("%.2f",result);
+    printf("%.2f", result);
+}
+char GetcharPutchar()
+{
+    char a;
+    printf("Enter name: ");
+    a = getchar();
+    putchar(a);
+}
+
+void main()
+{
+    int choice, operators, fabonacci, loop, decision, array, math, string, storageclass, pattern;
+    printf("Press 1: Opertors \nPress 2: Loop Control Structure \nPress 3: Decision Control Structure \nPress 4: Arrays \nPress 5: Fabonacci Number \nPress 6: Math Equation \nPress 7: String \nPress 8: Storage Classes \nPress 9: Patterns \n");
+    printf("\nPress Choice Your Number: ");
+    scanf("%d", &choice);
+    switch (choice)
+    {
+    case 1:
+        // clrscr();
+        printf("\nPress 1: Assignment Operator \nPress 2: Logical Operator \nPress 3: Relational Operator \nPress 4: Bitwise Operator \nPress 5: Arithmetic Operator \nPress 6: Increament/Decreament Operator \n");
+        printf("\nPress Choose Your Number: ");
+        scanf("%d", &operators);
+        switch (operators)
+        {
+        case 1:
+            AssignmentOperator();
+            break;
+        case 2:
+            LogicalOperator();
+            break;
+        case 3:
+            RelationalOperator();
+            break;
+        case 4:
+            BitwiseOperator();
+            break;
+        case 5:
+            ArithmeticOperator();
+            break;
+        case 6:
+            Prefix_PostfixNumber();
+            break;
+        }
+        break;
+    case 2:
+        printf("\nPress 1: Iteration Nested For Loop \nPress 2: Iteration For Loop \nPress 3: Do while  \nPress 4: Armstrong number using for loop \nPress 5: Armstrong using while loop \nPress 6: Table number range using for loop \nPress 7: Table number using for loop \nPress 8: ASCII value \nPress 9: LCM number \nPress 10: HCF number \nPress 11: Addition of Matrix \nPress 12: Palindrome using while loop \nPress 13: Cofficient Number \nPress 14: Revers Number \nPress 15: Prime Number \nPress 16: Interest 5 set using for loop \nPress 17: Transpose Matrix using for loop \nPress 18: Series of Addition \nPress 19: Reverse Sum Number using while loop \n");
+        printf("\nPress Choose Your Number: ");
+        scanf("%d", &loop);
+        switch (loop)
+        {
+        case 1:
+            IterationNestedForLoop();
+            break;
+        case 2:
+            IterationForLoop();
+            break;
+        case 3:
+            DoWhileLoop();
+            break;
+        case 4:
+            AmrStrongForLoop();
+            break;
+        case 5:
+            ArmStrongWhile();
+            break;
+        case 6:
+            TableNumberRange();
+            break;
+        case 7:
+            FirstNumberTable();
+            break;
+        case 8:
+            ASCII_Value();
+            break;
+        case 9:
+            LCM_Num();
+            break;
+        case 10:
+            HCF_Num();
+            break;
+        case 11:
+            SumOfMatrix();
+            break;
+        case 12:
+            palindrome_num();
+            break;
+        case 13:
+            power_num();
+            break;
+        case 14:
+            reverse_num();
+            break;
+        case 15:
+            isPrime();
+            break;
+        case 16:
+            Interest5set();
+            break;
+        case 17:
+            TransposeMatrix();
+            break;
+        case 18:
+            SumOfSeries();
+            break;
+        case 19:
+            ReverseSumNumber();
+            break;
+        }
+        break;
+    case 3:
+        printf("\nPress 1: Armstrong Number \nPress 2: IF Else \nPress 3: Factorial \nPress 4: Even Odd Number \n");
+        printf("\nPress Choice Your Number: ");
+        scanf("%d", &decision);
+        switch (decision)
+        {
+        case 1:
+            ArmStrongIfElse();
+            break;
+        case 2:
+            if_else();
+            break;
+        case 3:
+            factorial();
+            break;
+        case 4:
+            EvenOdd();
+            break;
+        }
+        break;
+    case 4:
+        printf("Press 1: Marks in array \n");
+        printf("\nPress Choice Your Number: ");
+        scanf("%d", &array);
+        switch (array)
+        {
+        case 1:
+            MarksNumberArrays();
+            break;
+        }
+        break;
+    case 5:
+        printf("Press 1: fibonacci Without Recursion \nPress 2: fibonacci With Recursion");
+        printf("\nPress Choice Your Number: ");
+        scanf("%d", &fabonacci);
+        switch (fabonacci)
+        {
+        case 1:
+            fibonacciWithoutRecursion();
+            break;
+        case 2:
+            fibonacciWithRecursion();
+            break;
+        }
+        break;
+    case 6:
+        printf("Press 1: Interest Rate \nPress 2: Address of value \n");
+        printf("\nPress Choice Your Number: ");
+        scanf("%d", &math);
+        switch (math)
+        {
+        case 1:
+            Interest_Rate();
+            break;
+        case 2:
+            address_define();
+            break;
+        case 3:
+            pointer();
+            break;
+        case 4:
+            ThreeSwappingVariables();
+            break;
+        case 5:
+            Calculator();
+            break;
+        }
+        break;
+    case 7:
+        printf("Press 1: String Property \nPress 2: String for loop \nPress 3: String strcmp \nPress 4: String without using strrev \nPress 5: Union \nPress 6: Structure \nPress 7: String Upper Lower case \nPress 8: Getchar/Putchar");
+        printf("\nPress Choice Your Number: ");
+        scanf("%d", &string);
+        switch (string)
+        {
+        case 1:
+            StringProperty();
+            break;
+        case 2:
+            StringForLoop();
+            break;
+        case 3:
+            String_strcmp();
+            break;
+        case 4:
+            StringWithoutstrrev();
+            break;
+        case 5:
+            Union();
+            break;
+        case 6:
+            Structure();
+            break;
+        case 7:
+            StringUpperLowercase();
+            break;
+        case 8:
+            GetcharPutchar();
+            break;
+        }
+        break;
+    case 8:
+        printf("Press 1: Static Storage class \nPress 2: Register Storage class \n");
+        printf("\nPress Choice Your Number: ");
+        scanf("%d", &storageclass);
+        switch (storageclass)
+        {
+        case 1:
+            StaticStorageCall();
+            break;
+        case 2:
+            RegisterStorageClass();
+            break;
+        }
+        break;
+    case 9:
+        printf("Press 1: Alphabatic Triangle Pattern \nPress 2: Number Triangle Pattern \n");
+        printf("\nPress Choice Your Number: ");
+        scanf("%d", &pattern);
+        switch (pattern)
+        {
+        case 1:
+            AlphabeticTrianglePattern();
+            break;
+        case 2:
+            NumericPattern();
+            break;
+        }
+        break;
+    }
+    // getch(); // getch() Pre-defined function
 }
