@@ -359,8 +359,9 @@ Binary No. 1010
 ```
 #### Q12. Write a program to check given no. is even or odd.
 Sol:- Even: A number divisible by 2 without a remainder.
-Odd: A number not divisible by 2 without a remainder.
+Odd: A number not divisible by 2 without a remainder.       
 Example:- 
+```c
 #include <stdio.h>
 int main()
 {
@@ -373,13 +374,12 @@ int main()
         printf("Odd number is: %d\n",num);
     }
 }
-
+```
+```
 OutPut:- 	Enter a Number: 4
 Even number is: 4
-
-
-
-13. Calculate the simple interest for 5 sets of values.
+```
+#### Q13. Calculate the simple interest for 5 sets of values.
 Sol:-
 #include <stdio.h>
 int main() {
