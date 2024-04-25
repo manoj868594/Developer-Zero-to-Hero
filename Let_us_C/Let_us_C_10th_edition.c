@@ -1,6 +1,7 @@
 #include <stdio.h> //
 #include <math.h>  //sqrt()
-int Array1(){
+int Array1()
+{
 	int m = 4;
 	int a, sum = 0, i, marks[4]; // any declaration
 	for (i = 0; i <= 3; i++)
@@ -17,7 +18,8 @@ int Array1(){
 	printf("Average Marks: %d\n", a);
 	return 0;
 }
-int Array2(){
+int Array2()
+{
 	int marks[5], i;
 	int add = 0;
 	printf("Enter Your 5 Subjects Marks: ");
@@ -31,7 +33,8 @@ int Array2(){
 	printf("Total marks %d", add);
 	return 0;
 }
-int Bonous(){
+int Bonous()
+{
 	int bonous, cyear, pyear, yos;
 	printf("Enter current year and year of joining");
 	scanf("%d%d", &cyear, &pyear);
@@ -47,7 +50,8 @@ int Bonous(){
 	}
 	return 0;
 }
-int isPrime(){
+int isPrime()
+{
 	int i, j = 2;
 	printf("Enter a Number for checking is prime number or not: ");
 	scanf("%d", &i);
