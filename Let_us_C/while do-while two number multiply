@@ -268,7 +268,7 @@ int ArmStrongIfElse()
     }
     else
     {
-        printf("It is not Armstrong: %d\nTotal Number is: %d\n", x, d);
+        printf("It is not Armstrong: %d\nTotal sum is: %d\n", x, d);
     }
 }
 int AmrStrongForLoop()
@@ -752,8 +752,7 @@ char StringForLoop()
     scanf("%s", d);
     printf("%s %s %s %s ", a, b, c, d);
 
-    for (i = 0; d[i] != '\0'; i++)
-        ; // if don't use strlen(); function
+    for (i = 0; d[i] != '\0'; i++); // if don't use strlen(); function
     printf("Length of %s: %d", d, i);
 }
 char String_strcmp()
@@ -969,7 +968,27 @@ char GetcharPutchar()
     a = getchar();
     putchar(a);
 }
+int WhileDoWhile() {
+    int num1, num2, result = 0,i = 0;
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+    while (i < num2) {
+        result += num1;
+        i++;
+    }
+    printf("Product (using while loop): %d\n", result);
 
+    result = 0; // Reset result
+    i = 0; // Reset counter
+    do {
+        result += num1;
+        i++;
+    } while (i < num2);
+    printf("Product (using do-while loop): %d\n", result);
+    return 0;
+}
 void main()
 {
     int choice, operators, fabonacci, loop, decision, array, math, string, storageclass, pattern;
@@ -1006,7 +1025,7 @@ void main()
         }
         break;
     case 2:
-        printf("\nPress 1: Iteration Nested For Loop \nPress 2: Iteration For Loop \nPress 3: Do while  \nPress 4: Armstrong number using for loop \nPress 5: Armstrong using while loop \nPress 6: Table number range using for loop \nPress 7: Table number using for loop \nPress 8: ASCII value \nPress 9: LCM number \nPress 10: HCF number \nPress 11: Addition of Matrix \nPress 12: Palindrome using while loop \nPress 13: Cofficient Number \nPress 14: Revers Number \nPress 15: Prime Number \nPress 16: Interest 5 set using for loop \nPress 17: Transpose Matrix using for loop \nPress 18: Series of Addition \nPress 19: Reverse Sum Number using while loop \n");
+        printf("\nPress 1: Iteration Nested For Loop \nPress 2: Iteration For Loop \nPress 3: Do while  \nPress 4: Armstrong number using for loop \nPress 5: Armstrong using while loop \nPress 6: Table number range using for loop \nPress 7: Table number using for loop \nPress 8: ASCII value \nPress 9: LCM number \nPress 10: HCF number \nPress 11: Addition of Matrix \nPress 12: Palindrome using while loop \nPress 13: Cofficient Number \nPress 14: Revers Number \nPress 15: Prime Number \nPress 16: Interest 5 set using for loop \nPress 17: Transpose Matrix using for loop \nPress 18: Series of Addition \nPress 19: Reverse Sum Number using while loop \nPress 20: Using While & Do-while multiply two numbers \n");
         printf("\nPress Choose Your Number: ");
         scanf("%d", &loop);
         switch (loop)
@@ -1067,6 +1086,9 @@ void main()
             break;
         case 19:
             ReverseSumNumber();
+            break;
+        case 20:
+            WhileDoWhile();
             break;
         }
         break;
