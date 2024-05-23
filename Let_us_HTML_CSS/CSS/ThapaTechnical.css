@@ -236,7 +236,7 @@ html{
 /* TO add custom fonts in CSS, you can use the @font-face rule, which allows you to define and include custom fonts in your web pages. */
 @font-face {
     font-family: "manojFont";
-    src: url(./Deep\ Hero.otf) format("OpenType");
+    src: url(/font_family/Deep\ Hero.otf) format("OpenType");
 }
 .fontfamily h2{
     font-family: 'manojFont';
