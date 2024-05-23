@@ -1,0 +1,47 @@
+body{
+    font-size: 10px;
+    padding: 0;
+    margin: 10px;
+    text-align: center;
+}
+/* justify-items and align-items works on grid container */
+/* justify-self and align-self works on grid cells */
+.container{
+    height: 500px;
+    width: 500px;
+    background-color: yellow;
+    display: grid;
+    /* grid-template-rows: 100px 100px;
+    grid-template-columns: 100px 100px 100px; */
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3,  1fr); */
+    grid-template-rows: 45px 1fr 100px;
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-items: normal;
+}
+h2{
+    width: 500px;
+}
+.item{
+    /* height: 100px; */
+    /* width: 100px; */
+    font-size: 1rem;
+    background-color: green;
+}
+.item1{
+    /* justify-self: center;
+    align-self: center; */
+    place-self: center;
+}
+.header{
+    background-color: #ccc;
+    /* grid-column-start: 1; */
+    /* grid-column-end: 4; */
+    grid-column: 1 / span 3;
+}
+.footer{
+    background-color: #ccc;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}

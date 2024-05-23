@@ -1,0 +1,474 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: hsl(0, 0%, 95%); */
+    display: grid;
+}
+h1{
+    color: blue;
+}
+.btn{
+    color: green;
+    font-weight: bold;
+}
+#btn{
+    color: black;
+}
+#btn:hover{
+    color: red;
+    background-color: lightgray;
+}
+.btn:hover{
+    background-color: black;
+}
+
+/** --------------------------------------->
+/** Notes:  Colors using Various Notations
+/** --------------------------------------->
+
+/*? Named Colors: You can use named colors, which are predefined color keywords. */
+h1{
+    color: darkcyan;
+}
+
+/*? RGB Colors: RGB (Red, Green, Blue) values allow you to define color by specifying the amount of red, green, blue in the color. */
+h1{
+    color: red;
+    color: rgb(255, 0, 0);
+}
+p{
+    color: blue;
+    color: rgb(0, 0, 255);
+}
+
+/*? RGBA Colors: RGBA is similar to RGB but includes an alpha channel for opacity control. */
+/* alfa - 0 - 1 */
+h1{
+    color: rgba(255, 0, 0, 1);
+}
+p{
+    /* background-color: rgba(0, 0, 255, 0.2); */
+}
+
+/*? Hexadecimal Colors: You can specify colors using hexadecimal values. */
+h1{
+    color: #ff00ff;
+}
+p{
+    color: #84cbf8;
+}
+
+/** --------------------------------------->
+/** More on Colors
+/** --------------------------------------->
+
+/* HSL Colors: HSL (Hue, Saturation, Lightness) values provide a way to specify colors based on their hue, Saturation, and Lightness */
+h1{
+    color: hsl(0, 65%, 50%);
+}
+/*  HSLA Colors: Similar to HSL, HSLA includes an alfa channel for opacity control. */
+h1{
+    color: hsl(225, 84%, 0%, 0.5);
+}
+
+/** --------------------------------------->
+/** Interview Questions
+/** --------------------------------------->
+/*  1: what is difference between rgb() and rgba() color notation in CSS. */
+/* rgb() notation specifies a color using the red, green, and blue channels without transparency. rgba() notation is an extension of rgb() and includes an additional alfa channel to specify the transparency. It stands for "red, green, blue, alpha". */
+
+/*  2: How can you make the text color of an element fully transparent using CSS ? Provide an example. */
+h1{
+    /* color: rgba(255, 0, 0, 0); */
+    /* color: transparent; */
+}
+
+/*  3: How can you set the text color of an element to match the current color of another CSS within the same element? */
+.hero_sec{
+    color: #ff00ff;
+}
+p{
+    color: currentColor;
+}
+
+/** --------------------------------------->
+/** Background Property
+/** --------------------------------------->*/
+body{
+    background-color: hsl(0, 0%, 94%);
+    background-image: url('https://images.pexels.com/photos/23285770/pexels-photo-23285770/free-photo-of-man-picking-up-a-woman-while-standing-ankles-deep-in-the-sea.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),url('https://images.pexels.com/photos/20304135/pexels-photo-20304135/free-photo-of-white-flowers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+.bg-prop{
+    /* background-repeat: repeat, repeat-x, repeat-y, no-repeat, calc(), round, space; */
+    background-repeat: no-repeat;
+    /* background-position: left, center, right, top, bottom, 0%; */
+    background-position: top ;
+    background-size: 100vw 100vh;
+    /* background-attachment: fixed, local, scroll; */
+
+}
+
+/** --------------------------------------->
+/** Background Property IN CSS3
+/** --------------------------------------->*/
+
+/* background-blend-mode: Applies blending mode to the background image and color -> multiply, screen, overlay */
+body{
+    background-blend-mode:luminosity;
+}
+
+/** --------------------------------------->
+/** Interview Questions
+/** --------------------------------------->*/
+
+/* 1. How can you set a background image for an element using CSS ? */
+/* You can set a background image using the background-image property, like this: */
+/* background-image: url('image.png'); */
+
+/* 2. How can you make a background image cover the entire without distortion ? */
+/* You can use background-size: cover; to make the background image cover entire element while maintaining its aspect ratio. This ensures the files container without distortion. */
+
+/* 3. How can you apply multiple background images to a single element ? */
+/* background-image property and using a commas to seprate them. like this: */
+/* background-image: url('image1.png'), url('image2.png'); */
+
+/* 4. What is the property that is used for controlling image-scroll ? */
+/* background-attachment: scroll; */
+
+/** --------------------------------------->
+/** Parallax Image
+/** --------------------------------------->*/
+
+.sec-1{
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6)),url("https://images.pexels.com/photos/23285770/pexels-photo-23285770/free-photo-of-man-picking-up-a-woman-while-standing-ankles-deep-in-the-sea.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-attachment: fixed;
+    width: 100%;
+}
+.sec-1 h2{
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px #000;
+}
+.sec-1 p{
+    font-size: 30px;
+    color: hsla(0, 0%, 93%, 0.7);
+}
+.sec-2{
+    background-image: linear-gradient(to right top, rgba(5,25,55,0.7),rgba(0,77,122,0.6),rgba(0,135,147,0.7)),
+    url('https://images.pexels.com/photos/20304135/pexels-photo-20304135/free-photo-of-white-flowers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+/** --------------------------------------->
+/** Units In CSS
+/** --------------------------------------->*/
+/* Absolute Length: THe absolute length units are fixd anf a length expressed in any of these will appear as exactly that size. */
+
+/* Relative Length: Relative length units specify a length relative to another length property. Relative lenght units scale better between different rendering medium. */
+
+/* Pixels (px): px is an absoluteunits of measurement in CSS, representing the smallest unit of screen space. */
+.units h1{
+    /* font-size: 30px; */
+    color: purple;
+}
+.units p{
+    /* font-size: 20px; */
+}
+
+/* Percentages (%): Percentages are relative units based on the parent element's size or the containing block. */
+/* for Percentages 100% = 16px */
+/* 1px = 6.25% */
+.units h1{
+    /* font-size: 187.8%; */
+}
+
+/* Em (em): em is relative unit that is calculated based on the font size of the parent element. */
+/* for 1em = 16px */
+.units h1{
+    /* font-size: 1.6em; */
+}
+.units p{
+    /* font-size: 1.1em; */
+}
+
+/* Root Em (rem): rem is also relative unit, but its based on the font size of the root (html) element. */
+html{
+    font-size: 19px;
+}
+.units h1{
+    font-size: 3.4rem;
+}
+.units p{
+    font-size: 1rem;
+}
+
+/** --------------------------------------->
+/** Interview Question
+/** --------------------------------------->*/
+
+/* 1: What is the main difference between em and rem units in CSS ? */  
+/* 2: How does using rem units in your CSS a responsive web design ? */
+/* 3: Can you explain how the font-size in em unit work when nested parent within element with different font size ? */
+
+/** --------------------------------------->
+/** Font Property
+/** --------------------------------------->*/
+
+.fontfamily div,.fontfamily h2{
+    font-size: 2.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.fontfamily h2{
+    font-weight: 700;
+    font-style: italic;
+    font-variant: small-caps;
+}
+
+/** --------------------------------------->
+/** Interview Question
+/** --------------------------------------->*/
+/* 1: How to add custom fonts in CSS ? */
+/* TO add custom fonts in CSS, you can use the @font-face rule, which allows you to define and include custom fonts in your web pages. */
+@font-face {
+    font-family: "manojFont";
+    src: url(./Deep\ Hero.otf) format("OpenType");
+}
+.fontfamily h2{
+    font-family: 'manojFont';
+}
+
+/* 2: What is fallback fonts? Why is it important to include fallback in your CSS font stack, and how do you specify them? */
+/* Including fallback fonts in your CSS font stack is important for ensuring that text remains legible on a variety of devices and browsers. If the preferred font is not availble on a user's device. */
+.fontfamily h2{
+    font-family: 'manojFont', Georgia, sans-serif;
+}
+
+/** --------------------------------------->
+/** Notes + Tips
+/** --------------------------------------->*/
+
+/* TrueType Font (.ttf): format('truetype') or format('opentype')
+WOFF Font (.woff): format('woff')
+WOFF2 Font (.woff2): format('woff2')
+Embedded OpenType Font (.eot): format('embedded-opentype')
+SVG Font (.svg): format('svg') */
+
+/** --------------------------------------->
+/** TEXT Properites IN CSS
+/** --------------------------------------->*/
+/* Text Alignment:- The text-align property contains the horizontal alignment of text with an element's box. 
+Common values are 'left', 'center', 'right', 'left', 'justify' */
+.textcss h2{
+    text-align: center;
+}
+/* Text Decoration:- The 'text-decoration' property allows you to add decorations like underlines, overlines, or line-through to text. */
+/* text-decoration: ;
+text-decoration-line: ;
+text-decoration-color: ;
+text-decoration-style: ;
+text-decoration-thickness: ; */
+.textcss h2{
+    text-decoration-line: underline;
+    text-decoration-color: purple;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 10px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+.textcss p{
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    line-height: 1.5;
+    /* white-space: wrap; */
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+
+/** --------------------------------------->
+/** Interview Question
+/** --------------------------------------->*/
+/* 1: How can you control the spacing between lines of text in CSS? */
+/* using line-height property */
+
+/* 2: How can you create drop caps (initial letter styling) in CSS? */
+/* drop caps using the ::first-letter pseudo-element in CSS */
+.textcss p::first-letter{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/** --------------------------------------->
+/** Border-Radius IN CSS
+/** --------------------------------------->*/
+
+.border p{
+    width: 80%;
+    margin-left: 10px;
+    /* border: 2px solid rgb(43, 36, 36); */
+    border-width: 3px;
+    border-style: hidden solid dashed ;
+    border-color: #84cbf8;
+    border-top: 5px ridge #ddd;
+}
+.borderradius{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: darkgoldenrod;
+    /* top-left, top-right, bottom-right, bottom-left */
+    border-radius: 50rem 10rem 200px 0;
+}
+
+/** --------------------------------------->
+/** Interview Questions
+/** --------------------------------------->*/
+/* 1: How do you set a border around an HTML element in CSS? Explain the border property and its value. */
+/* border: 2px solid #ccc; */
+
+/* 2: How can you create a circular rounded corners for an HTML element in CSS? */
+/* border-radius: 10px; */
+
+/* 3: How do you create a circular border using border-radius? */
+/* border-radius: 50%; */
+
+/** --------------------------------------->
+/** Padding elements
+/** --------------------------------------->*/
+.padding p{
+    /* padding: 10px; */
+    /* padding: 10px 30px 40px 50px; */
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 50px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+/** --------------------------------------->
+/** Interview Question
+/** --------------------------------------->*/
+/* 1: How do you set padding for all sides of an HTML element using shorthand notation? */
+/* padding: 10px 30px 40px 50px; */
+
+/* 2: What is the purpose of negative padding in CSS, and can you provide an example? */
+/* Negative padding is not standard CSS property. Padding is always a positive value to create space around an element's content. */
+
+/** --------------------------------------->
+/** Margin IN CSS
+/** --------------------------------------->*/
+
+.margin h2{
+    /* margin: 20px; */
+    margin-top: 100px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    border: 2px solid black;
+}
+.margin p{
+    border: 2px solid black;
+    /* We can give negative value */
+    margin-top: -40px;
+}
+.marginp{
+    margin: auto;
+    width: 70%;
+    margin-bottom: 50px;
+}
+
+/** --------------------------------------->
+/** Gradient CSS
+/** --------------------------------------->*/
+/* THe linear-gradint() CSS function create an image consistent of a progressive transition between two or more colors along straight line. */
+
+.gradient{
+    /* background-image: linear-gradient(red, yellow); */
+    /* background-image: linear-gradient(to right, red, yellow); */
+    /* background-image: linear-gradient(150deg, red, yellow); */
+    /* background-image: linear-gradient(to bottom right, red, green, blue); */
+    /* background-image: repeating-linear-gradient(45deg, #ddd, #79ac78 100px); */
+    /* background-image: linear-gradient(
+        to bottom right, 
+        rgba(5,25,55,0.5),
+        rgba(0,77,122,0.5)),
+        url('https://images.pexels.com/photos/20304135/pexels-photo-20304135/free-photo-of-white-flowers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+    background-image: radial-gradient(circle, red, yellow, green);
+}
+
+
+/** --------------------------------------->
+/** Interview Question
+/** --------------------------------------->*/
+/* 1: What are CSS gradient, and why are useful in web design? */
+/* CSS gradients are a way to create smooth transition between two or more specified colors. */
+
+/* 2: Explain the different between linear gradient and radial gradient in CSS, Why would you use one over the other. */
+/* Linear gradients create a smooth transition along a straight line, such as from top to bottom. Radial gradient create a circular transition from the center outward. */
+
+/* 3: How can you create a diagonal linear gradient in CSS? */
+/* background-image: linear-gradient(to bottom right, red, green, blue); */
+
+/* 4: How can you create a transparent gradient in CSS */
+/* alfa value is zero */
+/* background-image: linear-gradient(rgba(255,0,0,0)); */
+
+/** --------------------------------------->
+/** PROJECT
+/** --------------------------------------->*/
+
+/* create a repeating linear gradient in CSS */
+/* background-image: repeating-linear-gradient(45deg, #ddd, #79ac78 100px); */
+
+/* Add color overlay on image? */
+/* background-image: linear-gradient(
+        to bottom right, 
+        rgba(5,25,55,0.5),
+        rgba(0,77,122,0.5)),
+        url('https://images.pexels.com/photos/20304135/pexels-photo-20304135/free-photo-of-white-flowers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+
+/** --------------------------------------->
+/** BOx Shadow
+/** --------------------------------------->*/
+.shadow .box{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px;
+    background-color: darkgoldenrod;
+    /* box-shadow: offsetX offsetY blur spread color; */
+    box-shadow: 10px 10px 5px 2px yellow;
+}
+.shadow img{
+    height: 300px;
+    /* filter property using drop-shadow() */
+    box-shadow: 0px 0px 5px 2px yellow;
+    filter: drop-shadow(0 0 10px #333);
+    -webkit-filter: drop-shadow(0 0 10px #333);
+}
+
+/** --------------------------------------->
+/** Filter IN CSS
+/** --------------------------------------->*/
+ /* grayscale(), blur(), brightness(), contrast(), saturate(), hue-rotate(), invert() opacity(), sepia() */
+.filters img{
+    margin: 10px;
+    height: 500px;
+    /* -webkit-filter: brightness(10%); */
+    /* -webkit-filter: saturate(2); */
+    -webkit-filter: opacity(0.5);
+}
+
+/** --------------------------------------->
+/** Interview Questions
+/** --------------------------------------->*/
+
+4:32:26

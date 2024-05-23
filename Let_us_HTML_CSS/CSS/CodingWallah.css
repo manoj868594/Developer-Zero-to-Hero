@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    /* height: 100%;
+    width: 100%; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 96%;
+}
+#salesuimain{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.fakeheader{
+    height: 60px;
+}
+.header{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #01014b;
+    background-color: rgba(220, 220, 220, 0.9);
+    box-shadow: 0 0 10px 1px #000;
+    z-index: 99;
+}
+.logo{
+    height: 80%;
+    margin: auto 40px;
+}
+.logo img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(0px 1px 4px #000);
+}
+.items{
+    display: flex;
+    font-weight: 700;
+}
+.items div{
+    margin: 0 10px;
+    padding: 22px 15px;
+    cursor: pointer;
+}
+.items div:hover,.contact a:hover,#login:hover{
+    color: blue;
+    transition: all ease-in 0.5s;
+}
+.contact{
+    margin: auto 30px;
+    padding: 10px;
+    text-align: center;
+}
+.contact h3{
+    font-weight: normal;
+    font-size: .9rem;
+}
+.contact a{
+    color: #000;
+    font-weight: normal;
+    font-size: .9rem;
+}
+#icon i{
+    padding: 10px;
+    border-radius: 50%;
+}
+#icon{
+    margin-left: 0px;
+}
+#icon i:hover{
+    cursor: pointer;
+    background-color: lightblue;
+    transition: all ease-out 0.5s;
+}
+#login{
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+.trybtn{
+    border-radius: 5px;
+    background-color: darkgreen;
+    margin: 20px;
+}
+.trybtn:hover{
+    transition: all ease-in 1s;
+    background-color: #032c09;
+}
+.trybtn h4:hover{
+    color: #fff;
+    transition: all ease-in 1s;
+}
+.trybtn h4{
+    padding: 10px;
+    color: #ccc;
+    font-size: 1rem;
+}
+.underheader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(5, 5, 73);
+    padding: 13px;
+    color: #eee;
+    font-size: 14px;
+    height: 40px;
+}
+.underheader a{
+    margin: 0 17px;
+    color: #fff;
+}
+#content{
+    width: 100%;
+    /* background-color: salmon; */
+    display: flex;
+}
+.left{
+    padding: 30px;
+    margin: 20px;
+    width: 50%;
+    /* background-color: green; */
+}
+.left h1{
+    font-size: 2.6rem;
+    color: #0a0a4d;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+}
+.left p{
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 19px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#testbuttn{
+    display: flex;
+    margin-top: 40px;
+}
+.startbtn{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: darkblue;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+}
+.startbtn:hover{
+    background-color: rgb(25, 25, 214);
+    color: #ccc;
+}
+.watchbtn{
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 2px solid blue;
+    color: blue;
+    border-radius: 5px;
+}
+.watchbtn:hover{
+    background-color: rgba(168, 168, 168, 0.3);
+    border-color: #000;
+    color: #333;
+    transition: 1s;
+}
+.right{
+    width: 50%;
+    position: relative;
+    /* margin: 20px; */
+}
+.right img{
+    position: absolute;
+    right: 0;
+    height: 90%;
+    width: 80%;
+    opacity: 0.5;
+    border-radius: 0 0 0 100%;
+    z-index: 2;
+}
+.right iframe{
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    z-index: 9;
+}
+#content2{
+    margin: 50px;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+
+/*-------------------------
+/*  Card Container
+/*-------------------------- */
+#cardmain{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 230px;
+    border: 2px solid salmon;
+    border-radius: 10px;
+    overflow: hidden;
+}
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+#card1{
+    transform: translate(-50%, -50%);
+    background-image: url('https://images.freeimages.com/variants/oXcpy7HnQ2DUob2pBum4FAnu/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&h=350');
+    z-index: 4;
+}
+#card2{
+    transform: translate(-50%, -50%) rotate(-7deg);
+    z-index: 3;
+}
+#card3{
+    transform: translate(-50%, -50%) rotate(-14deg);
+    z-index: 2;
+}
+#card4{
+    z-index: 1;
+    transform: translate(-50%, -50%) rotate(-21deg);
+}
+#card2:hover,#card3:hover,#card4:hover,#card1:hover{
+    z-index: 4;
+}
