@@ -9,6 +9,11 @@
         padding: 5px 10px;
         font-size: 17px;
       }
+      table,tr,th,td{
+        gap: 1rem;
+        font-size: 19px;
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body>
@@ -22,6 +27,11 @@
     <h3>Start should change the background color every second</h3>
     <button id="startbg">Start</button>
     <button id="stopbg">Stop</button>
+    <div class="project">
+      <div id="insert">
+        <div class="key">Press the key & watch magic</div>
+      </div>
+    </div>
   </body>
   <script src="./26_events.js"></script>
 </html>
