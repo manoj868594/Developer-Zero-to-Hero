@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/ThapaJSLearn.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <button onclick="clearInterval(abc)">Clear me</button>
+    <p id="random"></p>
+    <p id="ceilMath"></p>
+    <p id="round"></p>
+    <h1>Hello</h1>
+    <div class="main4" id="main1">
+        <div class="elem">
+            <h1>OperHimer</h1>
+            <img src="https://images.unsplash.com/photo-1717501218661-0322e4bc4c81?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="1">
+        </div>
+        <div class="elem">
+            <h1>Joe Root</h1>
+            <img src="https://images.unsplash.com/photo-1718963892337-b6729c302b8f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="2">
+        </div>
+        <div class="elem">
+            <h1>James Anderson</h1>
+            <img src="https://images.unsplash.com/photo-1715449187020-e090eb0dc3d2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="3">
+        </div>
+        <div class="elem">
+            <h1>Roman Reign</h1>
+            <img src="https://images.unsplash.com/photo-1718813832812-aa9b3e07ead0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="4">
+        </div>
+    </div>
+    <div class="main4" id="main2">
+        <div class="elem">
+            <h1>OperHimer</h1>
+            <img src="https://images.unsplash.com/photo-1717501218661-0322e4bc4c81?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="1">
+        </div>
+        <div class="elem">
+            <h1>Joe Root</h1>
+            <img src="https://images.unsplash.com/photo-1718963892337-b6729c302b8f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="2">
+        </div>
+        <div class="elem">
+            <h1>James Anderson</h1>
+            <img src="https://images.unsplash.com/photo-1715449187020-e090eb0dc3d2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="3">
+        </div>
+        <div class="elem">
+            <h1>Roman Reign</h1>
+            <img src="https://images.unsplash.com/photo-1718813832812-aa9b3e07ead0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="4">
+        </div>
+    </div>
+    <div class="main4" id="main3">
+        <div class="elem">
+            <h1>OperHimer</h1>
+            <img src="https://images.unsplash.com/photo-1717501218661-0322e4bc4c81?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="1">
+        </div>
+        <div class="elem">
+            <h1>Joe Root</h1>
+            <img src="https://images.unsplash.com/photo-1718963892337-b6729c302b8f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="2">
+        </div>
+        <div class="elem">
+            <h1>James Anderson</h1>
+            <img src="https://images.unsplash.com/photo-1715449187020-e090eb0dc3d2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="3">
+        </div>
+        <div class="elem">
+            <h1>Roman Reign</h1>
+            <img src="https://images.unsplash.com/photo-1718813832812-aa9b3e07ead0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="4">
+        </div>
+    </div>
+    <div id="mouseMove"></div>
+    <h2>Reverse the string real time with decreamenting for loop</h2>
+    <input type="text" name="" id="reverseName" onkeyup="reverseString()" placeholder="type Name">
+    <input type="text" id="showData" placeholder="Reverse Name">
+    <div style="background-color: #fff;text-align: center;">
+        <h4>Love Calculator</h4><br>
+        <div style="display: flex;">
+            <input type="text" placeholder="Your Name" id="lovename1">
+            <div><span style="padding: 0 1rem;"> + </span></div>
+            <input type="text" placeholder="Love Name" id="lovename2">
+        </div><br>
+        <div>
+            <button onclick="checkLove()">Click</button>
+        </div><br>
+        <div>
+            <input type="text" placeholder="Love Percentage" id="loveValue" readonly>
+        </div><br>
+        <h5>God Bless Your Relationship</h5>
+    </div>
+    <div class="bmicontainer">
+        <div class="bmiheader">BMI CALCULATOR</div>
+        <div class="bmibody">
+            <form onsubmit="return false">
+                <div class="formbmi">
+                    <label for="weight">Weight: </label>
+                    <input type="number" placeholder="Weight in kg" required id="weight" autocomplete="off">
+                </div>
+                <div class="formbmi">
+                    <label for="height">Height: </label>
+                    <input type="text" placeholder="Height in feet" required id="height">
+                </div>
+                <div>
+                    <button type="submit" onclick="bmicheck()">Check BMI</button>
+                </div>
+                <div class="formbmi">
+                    <label for="bmiValue">BMI Value: </label>
+                    <input type="number" id="bmiValue" readonly>
+                </div>
+            </form>
+        </div>
+        <div class="bmifooter">A healthy BMI ranges between 19 and 25.</div>
+    </div>
+    <div class="dicecontainer">
+        <h1 id="result">JS LUDO</h1>
+        <div class="dice">
+            <p>Player 1</p>
+            <img src="../img/dice-six-faces-1.png" alt="none" id="check1">
+        </div>
+        <div class="dice">
+            <p>Player 2</p>
+            <img src="../img/dice-six-faces-2.png" alt="none" id="check2">
+        </div>
+        <div>
+            <button onclick="ludoGame()">click me</button>
+        </div>
+    </div>
+    <div class="maindiv" style="width: 100%; height: 100vh;background-color: darkgray;">
+        <h1>Welcome To Typing Speed Test</h1>
+        <h4 style="padding: 1rem 10rem;" id="msg"></h4>
+        <div class="cnterdiv">
+            <textarea name="words" id="words" placeholder="Remember, be nice!" rows="10" cols="100"></textarea>
+        </div>
+        <div class="btn">
+            <button id="sbtn">Start</button>
+        </div>
+    </div>
+    <div>
+        <select title="Select Your Favourite" onchange="mylang(this.value)">
+            <option>Select Here</option>
+            <option>PHP</option>
+            <option>JavaScript</option>
+            <option>PYTHON</option>
+        </select>
+    </div>
+    <div>
+        <select name="select2" title="select" id="select2">
+            <option value="">Select Here</option>
+        </select>
+    </div>
+    <button id="clickme">Click Me</button>
+    <div class="register">
+        <div class="content">
+            <div class="header">
+                <h2>Registratiorn Form</h2>
+            </div>
+            <form class="" id="form">
+                <div class="form-control">
+                    <label>Username</label>
+                    <input type="text" name="usrname" id="usrname" placeholder="Enter fullname" autocomplete="off">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>Error Msg</small>
+                </div>
+                <div class="form-control">
+                    <label>Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter email" autocomplete="off">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>Error Msg</small>
+                </div>
+                <div class="form-control">
+                    <label>Password</label>
+                    <input type="password" name="pass" id="pass" placeholder="Enter Password" autocomplete="off">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>Error Msg</small>
+                </div>
+                <div class="form-control">
+                    <label>Confirm Password</label>
+                    <input type="password" name="cpass" id="cpass" placeholder="Enter Confirm Password" autocomplete="off">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>Error Msg</small>
+                </div>
+                <input type="submit" value="Submit" class="btn" name="Submit">
+            </form>
+        </div>
+    </div>
+   
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="../js/ThapaJSLearn.js"></script>
+</body>
+</html>
